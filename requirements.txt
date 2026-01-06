@@ -1,0 +1,21 @@
+# Requirements for advanced authentication features
+
+# Core dependencies (already installed)
+fastapi>=0.127.0
+uvicorn
+sqlalchemy
+asyncpg
+python-dotenv
+pydantic-settings
+passlib[bcrypt]
+python-jose[cryptography]
+
+# New dependencies for advanced auth features
+fastapi-mail          # Email sending (SMTP)
+pyotp                 # TOTP/2FA authentication
+qrcode[pil]          # QR code generation for 2FA
+httpx                # OAuth HTTP client
+
+# Optional but recommended
+redis                 # For production rate limiting (replace in-memory)
+celery               # For background email tasks
